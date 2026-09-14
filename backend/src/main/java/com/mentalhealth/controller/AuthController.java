@@ -13,6 +13,9 @@ public class AuthController {
     private final AuthService authService;
     public AuthController(AuthService authService) { this.authService = authService; }
 
+    @GetMapping("/")
+    public ResponseEntity<String> root() { return ResponseEntity.ok("MindCare API is running"); }
+
     @GetMapping("/health")
     public ResponseEntity<String> health() { return ResponseEntity.ok("MindCare API is healthy"); }
 
