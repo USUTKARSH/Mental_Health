@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping("/api/auth")
+@CrossOrigin(origins = {
+    "https://mental-health-wheat.vercel.app",
+    "http://localhost:3000"
+})
 public class AuthController {
     private final AuthService authService;
     public AuthController(AuthService authService) { this.authService = authService; }
